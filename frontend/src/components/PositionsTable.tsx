@@ -4,7 +4,7 @@ interface PositionsTableProps {
   positions: Position[];
 }
 
-export function PositionsTable({ positions }: PositionsTableProps): JSX.Element {
+export function PositionsTable({ positions }: PositionsTableProps) {
   return (
     <section className="card overflow-hidden">
       <div className="border-b border-white/10 p-4">

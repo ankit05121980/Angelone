@@ -1,4 +1,4 @@
-export function RiskSettings(): JSX.Element {
+export function RiskSettings() {
   const settings = [
     ["NIFTY capital", "INR 50,000"],
     ["BANKNIFTY capital", "INR 50,000"],

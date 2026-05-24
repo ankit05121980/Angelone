@@ -11,7 +11,7 @@ import { TradeHistory } from "./components/TradeHistory";
 import { useRealtime } from "./hooks/useRealtime";
 import { useAppStore } from "./store";
 
-export function App(): JSX.Element {
+export function App() {
   const { summary, positions, trades, candles, logs, load } = useAppStore();
   useRealtime();
 

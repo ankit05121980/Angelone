@@ -3,7 +3,7 @@ import { Power, RadioTower } from "lucide-react";
 import { useAppStore } from "../store";
 import type { TradeMode } from "../types";
 
-export function StrategyControls(): JSX.Element {
+export function StrategyControls() {
   const summary = useAppStore((state) => state.summary);
   const setStrategy = useAppStore((state) => state.setStrategy);
   const mode = summary?.mode ?? "paper";

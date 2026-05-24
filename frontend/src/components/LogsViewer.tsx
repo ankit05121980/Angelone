@@ -4,7 +4,7 @@ interface LogsViewerProps {
   logs: LogEvent[];
 }
 
-export function LogsViewer({ logs }: LogsViewerProps): JSX.Element {
+export function LogsViewer({ logs }: LogsViewerProps) {
   return (
     <section className="card p-4">
       <div className="mb-3 flex items-center justify-between">

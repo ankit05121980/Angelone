@@ -1,6 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 
-export function LoginScreen(): JSX.Element {
+export function LoginScreen() {
   return (
     <section className="card p-6">
       <div className="mb-4 flex items-center gap-3">

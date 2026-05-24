@@ -1,4 +1,4 @@
-import { createChart, type IChartApi } from "lightweight-charts";
+import { CandlestickSeries, createChart, type IChartApi } from "lightweight-charts";
 import { useEffect, useRef } from "react";
 
 import type { Candle, IndexSymbol } from "../types";
@@ -8,7 +8,7 @@ interface ChartPanelProps {
   candles: Candle[];
 }
 
-export function ChartPanel({ symbol, candles }: ChartPanelProps): JSX.Element {
+export function ChartPanel({ symbol, candles }: ChartPanelProps) {
   const container = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export function ChartPanel({ symbol, candles }: ChartPanelProps): JSX.Element {
       layout: { background: { color: "#0f1b2d" }, textColor: "#cbd5e1" },
       grid: { vertLines: { color: "#1e293b" }, horzLines: { color: "#1e293b" } }
     });
-    const series = chart.addCandlestickSeries({
+    const series = chart.addSeries(CandlestickSeries, {
       upColor: "#22c55e",
       downColor: "#ef4444",
       borderVisible: false,

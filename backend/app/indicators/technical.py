@@ -25,7 +25,10 @@ def rsi(series: pd.Series, period: int = 14) -> pd.Series:
     avg_gain = gain.ewm(alpha=1 / period, adjust=False).mean()
     avg_loss = loss.ewm(alpha=1 / period, adjust=False).mean()
     rs = avg_gain / avg_loss.replace(0, np.nan)
-    return (100 - (100 / (1 + rs))).fillna(50)
+    values = 100 - (100 / (1 + rs))
+    values = values.mask((avg_loss == 0) & (avg_gain > 0), 100)
+    values = values.mask((avg_loss == 0) & (avg_gain == 0), 50)
+    return values.fillna(50)
 
 
 def vwap(df: pd.DataFrame) -> pd.Series:

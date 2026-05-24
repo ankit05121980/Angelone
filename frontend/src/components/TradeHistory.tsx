@@ -4,7 +4,7 @@ interface TradeHistoryProps {
   trades: Trade[];
 }
 
-export function TradeHistory({ trades }: TradeHistoryProps): JSX.Element {
+export function TradeHistory({ trades }: TradeHistoryProps) {
   return (
     <section className="card overflow-hidden">
       <div className="border-b border-white/10 p-4">

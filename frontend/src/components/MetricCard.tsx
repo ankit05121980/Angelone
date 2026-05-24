@@ -4,7 +4,7 @@ interface MetricCardProps {
   tone?: "neutral" | "success" | "danger";
 }
 
-export function MetricCard({ label, value, tone = "neutral" }: MetricCardProps): JSX.Element {
+export function MetricCard({ label, value, tone = "neutral" }: MetricCardProps) {
   const color = tone === "success" ? "text-success" : tone === "danger" ? "text-danger" : "text-white";
   return (
     <div className="card p-4">

@@ -32,7 +32,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   },
   setStrategy: async (enabled, mode) => {
     await updateStrategy(enabled, mode);
-    set({ summary: get().summary ? { ...get().summary, strategy_enabled: enabled, mode } : get().summary });
+    const current = get().summary;
+    set({ summary: current ? { ...current, strategy_enabled: enabled, mode } : null });
   },
   pushEvent: (event, payload) => {
     set({ logs: [{ time: new Date().toLocaleTimeString(), event, payload }, ...get().logs].slice(0, 100) });

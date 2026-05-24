@@ -13,13 +13,14 @@
     "@vitejs/plugin-react": "latest",
     "axios": "latest",
     "lightweight-charts": "latest",
-    "socket.io-client": "latest",
-    "zustand": "latest",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "socket.io-client": "latest",
+    "zustand": "latest"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
