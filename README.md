@@ -71,6 +71,26 @@ npm run dev
 npm run build
 ```
 
+## Vercel frontend deployment
+
+The React dashboard can be deployed to Vercel from the repository root using `vercel.json`.
+
+Set these Vercel environment variables to point the dashboard at a separately hosted FastAPI backend:
+
+```text
+VITE_API_URL=https://your-backend.example.com/api/v1
+VITE_WS_URL=wss://your-backend.example.com/api/v1/ws
+```
+
+CLI deployment:
+
+```bash
+export VERCEL_TOKEN=your-token
+./scripts/deploy-vercel.sh
+```
+
+See [Vercel deployment](docs/VERCEL.md) for details.
+
 ## Safety defaults
 
 The app defaults to `paper` mode. Paper mode never calls Angel One order APIs. Live mode requires SmartAPI credentials in `.env` and should only be enabled after verifying instrument symbols, expiry selection, and broker tokens.
@@ -80,6 +100,7 @@ The app defaults to `paper` mode. Paper mode never calls Angel One order APIs. L
 - [API documentation](docs/API.md)
 - [Deployment guide](docs/DEPLOYMENT.md)
 - [Strategy execution flow](docs/STRATEGY_FLOW.md)
+- [Vercel deployment](docs/VERCEL.md)
 
 ## Tests
 
